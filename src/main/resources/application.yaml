@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: ${ORDER_URI}
+          predicates:
+            - Path=/product
+        - id: order-service
+          uri: ${PRODUCT_URI}
+          predicates:
+            - Path=/orders
+        - id: payment-service
+          uri: ${PAYMENT_URI}
+          predicates:
+            - Path=/payment
