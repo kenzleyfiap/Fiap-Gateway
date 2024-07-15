@@ -3,11 +3,11 @@ spring:
     gateway:
       routes:
         - id: product-service
-          uri: ${ORDER_URI}
+          uri: ${PRODUCT_URI}
           predicates:
             - Path=/product
         - id: order-service
-          uri: ${PRODUCT_URI}
+          uri: ${ORDER_URI}
           predicates:
             - Path=/orders
         - id: payment-service

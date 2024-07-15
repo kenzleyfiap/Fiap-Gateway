@@ -7,6 +7,10 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+          PRODUCT_URI: http://localhost:8081
+          ORDER_URI: http://localhost:8082
+          PAYMENT_URI: http://localhost:8083
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
