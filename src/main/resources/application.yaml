@@ -5,12 +5,12 @@ spring:
         - id: product-service
           uri: ${PRODUCT_URI}
           predicates:
-            - Path=/product
+            - Path=/product/**
         - id: order-service
           uri: ${ORDER_URI}
           predicates:
-            - Path=/orders
+            - Path=/orders/**
         - id: payment-service
           uri: ${PAYMENT_URI}
           predicates:
-            - Path=/payment
+            - Path=/payment/**
